@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista actores</title>
+</head>
+<body>
+    <h1>Lista actores</h1>
+    {% for actor in actores %}
+        <li><a href="{% url 'movies:actor_detail' actor.id %}">{{ actor.first_name }} {{ actor.last_name }}</a></li>
+    {% endfor %}
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Detalles del director {{ director.first_name }} {{ director.last_name }}</h1>
+    <ul>
+        <li>{{ director.first_name }} {{ director.last_name }}</li>
+        <li>{{ director.birth_date }}</li>
+        {% for movie in director.movie_set.all %}
+            <li>{{ movie.title }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

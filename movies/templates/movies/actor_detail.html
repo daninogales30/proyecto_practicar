@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalles actor</title>
+</head>
+<body>
+    <h1>Detalles del actor {{ actor.first_name }} {{ actor.last_name }}</h1>
+    <ul>
+        <li>{{ actor.first_name }} {{ actor.last_name }}</li>
+        {% for movie in actor.movies.all %}
+            <li>{{ movie.title }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalles</title>
+</head>
+<body>
+    <h1>Detalles de la película {{ movie.title }}</h1>
+    <ul>
+        <li>{{ movie.title }}</li>
+        <li>{{ movie.director.first_name }} {{ movie.director.last_name }}</li>
+        <li>{{ movie.genre }}</li>
+        <li>{{ movie.release_date }}</li>
+        <li>{{ movie.rating }}</li>
+        <li>{{ movie.summary }}</li>
+        {% for actor in movie.actor_set.all %}
+            <li><a href="{% url 'movies:actor_detail' actor.id %}">{{ actor.first_name }} {{ actor.last_name }}</a></li>
+        {% endfor %}
+    </ul>
+
+</body>
+</html>

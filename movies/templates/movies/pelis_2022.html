@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Peliculas 2022</title>
+</head>
+<body>
+    <h1>Peliculas en 2022</h1>
+    <ul>
+        {% for pelicula in peliculas %}
+            <li>{{ pelicula.title }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

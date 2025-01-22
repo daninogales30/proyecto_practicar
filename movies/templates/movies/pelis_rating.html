@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pelicula por rating</title>
+</head>
+<body>
+    <h1>Peliculas con rating mayor a 8</h1>
+    <ul>
+        {% for pelicula in peliculas %}
+            <li>{{ pelicula.title }}</li>
+        {% endfor %}
+</body>
+</html>
