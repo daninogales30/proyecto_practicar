@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+    <h1>Estas en la página principal</h1>
+    {% for movie in movies %}
+        <ul>
+            <li>{{ movie.title }}</li>
+            <li>{{ movie.director.first_name }} {{ movie.director.last_name }}</li>
+            <li>{{ movie.rating }}</li>
+        </ul><br>
+    {% endfor %}
+</body>
+</html>
