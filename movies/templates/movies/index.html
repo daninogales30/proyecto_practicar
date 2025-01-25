@@ -17,5 +17,9 @@
     <a href="{% url 'movies:lista_directores' %}">Lista directores</a>
     <a href="{% url 'movies:lista_actores' %}">Lista actores</a>
     <a href="{% url 'movies:pelis_2022' %}">Ver pelis 2022</a>
+    <form action="{% url 'logout' %}" method="post">
+    {% csrf_token %}
+    <button type="submit">Cerrar sesión</button>
+</form>
 </body>
 </html>
